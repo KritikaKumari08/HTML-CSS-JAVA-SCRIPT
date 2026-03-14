@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="java.js"></script>
+   
+    
+</head>
+<body>  
+    <script>
+        console.log("Kriti")                      //Show output on console. 
+        console.log("Have a nice day.")
+
+        document.write("Monitor" + "<br>")
+        document.write("kmclc" + "<br>")
+
+        function showMessage()                               //It gives an alert message as you use it.
+        { 
+            alert("Hello")
+        }
+        function Show()
+        {
+            alert("Kritika")
+        }
+        function Message()
+        {
+            alert("I don't know")
+        }
+        function Move()
+        {
+            alert("krjetg")
+        }
+
+
+        var a=10; //scoped
+        document.write("a="+a);
+        document.write("a=",a);
+        a=500; //reassignment of a
+        document.write("a=",a);
+        var a=70; //redeclaratin of a 
+        document.write("a=",a);
+
+        let b=30;
+        console.log("b=",b);
+        b=60;     // reassignment of b
+        console.log("b="+b);
+        // let b=1000;  //redeclation is not allowed in case of let only we can reassign
+        // console.log("b=",b);
+
+        const c=80;
+        console.log("c=",c);
+        // c=70;              //no reassignment in case of const 
+        // console.log("c=",c);
+        // const c=100;     // no declaration in case of const
+        // console.log("c=",c);
+
+
+        
+        var age=30;                         //  (var)-can be reassignment and redeclaration.//scoped
+        var age=40; 
+        var age=50;
+        let fullname="Mandeep";                // (let)- no redeclaration only reassignment. 
+        fullname="Apman";                      // (const)- neither redeclaration nor assignment. 
+        const price="$100";
+        document.write("Name is:"+ fullname +"<br>");
+        document.write("age is:"+ age +"<br>");
+        document.write("price:"+ price +"<br>");
+
+        let a=10;                                  //Arithmetic Operator 
+        let b=2;
+        document.write("Arithmetic Operator:" + "<br>");
+        document.write((a+b) +"<br>");
+        document.write((a-b) +"<br>");
+        document.write((a*b) +"<br>");
+        document.write((a/b) +"<br>");
+        document.write((a%b) +"<br>");
+        document.write((a**b) +"<br>");
+
+        document.write("Assignment Operator:" + "<br>" );
+        document.write((b+=10) +"<br>");                //Assignment Operator
+        document.write((a+=4) + "<br>");                   
+        document.write((b-=10) +"<br>");                   // b-=10 ==>> b=b-10
+        document.write((b*=10) +"<br>");
+        document.write((b/=10) +"<br>");
+        document.write((b%=10) +"<br>");                   // b = b % 10
+        
+        const c=5;                                       //Comparison Operator(answer T/F)
+        const d="5"; 
+        document.write("Comparison Operator:"+ "<br>"); 
+        document.write((a==b) + "<br>");                  // "==" check if value are same.
+        document.write((a===b) + "<br>");                 // "===" check if value and data type are same.
+        document.write((a!=b) + "<br>");
+        document.write((a!==b) + "<br>");                  // "!==" check both value and dtype.
+        document.write((a>b) + "<br>"); 
+        document.write((a>=b) + "<br>");
+        
+         //Logical Operator          //and = (&&),or=(||),Not=(!)
+
+
+         //Increment and Decrement
+        let e=10;                                       
+        document.write((e++) + "<br>");                  //(e++)- will give the print the value of e and increment at the back end.
+        document.write((++e) + "<br>");                  //(++e)- will increment the value and then print it.
+        document.write((e--) + "<br>");
+        document.write((--e) + "<br>");
+        
+        //CONTROL STATEMENT
+        // if....else
+        let y=25;
+        let z=35;
+        if (y>z && y>50)
+        {                                                          //   curly bracket open to curly bracket close is one block 
+            document.write(y + "<br>");
+        }
+        else
+        {
+            document.write(z +"<br>");
+        }
+
+
+        const score=83;
+        if (score>=90)
+        {
+            console.log("Grade A");
+        }
+        else if (score>=80)
+        {
+            console.log("Grade B");
+        }
+        else if (score>=70)
+        {
+            console.log("Grade C");
+        }
+        else if (score>=60)
+        {
+            console.log("Grade D");
+        }
+        else
+        {
+            console.log("FAIL");
+        }
+
+        //switch  &  break
+
+        let day=8;
+        switch (day)
+        {
+            case 1:
+                console.log("Monday");
+                break;
+            case 2:
+                console.log("Tuesday");
+                break;
+            case 3:
+                console.log("Wednesday");
+                break;
+            case 4:
+                console.log("Thursday");
+                break;
+            case 5:
+                console.log("Friday");
+                break;
+            case 6:
+                console.log("Saturday");
+                break;
+            case 7:
+                console.log("Sunday");
+                break; 
+            default: 
+                console.log("Invalid Day");
+        }
+
+        // loops //
+        // for and while has three condition 1.assigning,2.condition,3.increment and decrement//
+        
+        //FOR LOOP  
+
+        for (let i=1;i<=5; i++)
+        {
+           console.log("iteration" + i);
+        }
+
+        for (let j=1;j<=5;j++){        //break
+            if (j==3){
+                break;
+            }
+            console.log(j);
+        }
+
+        for (let j=1;j<=5;j++){           //continue
+            if (j==3){
+               continue;
+            }
+            console.log(j);
+        }
+
+        for(k=10;k>=50;k++)   //This code will never run kyuki vo loop chalne ke liye condition check hogi 10>=50 aur wo false hai 
+        {
+            console.log(k);        //no output,no error 
+        }
+
+        
+        for(k=5;k<=50;k--)            // Infinite loop
+        {
+            console.log(k);
+        }
+
+        for (let i=1;i<=3;i++){        // Nested list
+            for (let j=1;j<=2;j++){
+                console.log("i="+i+",j="+j);
+            }
+        }
+
+        // WHILE LOOPS 
+
+        let k=1;
+        while(k<=5){
+            console.log("count:"+k);
+            k++;   //Increment to avoid infinite looping
+        }   
+
+       
+        // DO WHILE LOOP 
+        let j=1;
+        do{
+            console.log("Number:",j);
+            j++;
+        }
+        while(j<=5);
+        
+        
+    </script>
+
+    <button onclick="showMessage()">Click Me</button> 
+    <button onclick="Show()">Submit</button>
+    <button onclick="Message()">Fetch</button>
+    <button onclick="Do()">Button</button>
+    <button onclick="Done()">Feedback</button>
+
+    <script>
+
+    //confirm box//
+
+    // let response=confirm("Do you want to delete this file?");
+    // if(response){
+    //     alert("File deleted successfully!");
+    // }
+    // else{
+    //     alert("Action cancelled");
+    // }
+        
+    //prompt box//
+
+    // let name=prompt("Please enter your name:");
+    // if (name){
+    //     alert("Hello"+name+"!Welcome to javaScript.");}
+    // else{
+    //     alert("You didn't enter your name.");
+    // }
+        
+    //objects-collection of key and values.Here name/age/course is key and their value are value.//
+
+        let students={
+            name:"John",
+            age:21,
+            course:"B.Tech"
+        };
+        //fetching values from students object(there are two ways:1.Dot Notation,2.Bracket Notation) //
+        console.log(students.name);
+        console.log(students["age"]);
+
+        // Adding value in object
+
+        students.grade="A";
+        console.log(students.grade);
+
+        // Deleting value in object students
+
+        delete students.course;
+        console.log(students.course);
+
+        // document.getElement("text").style.color="blue";
+
+        //CA-2
+
+        console.log({}+[]);
+        console.log(typeof []);
+        console.log(undefined + "5");
+        console.log(null + 5);
+        console.log(10/"2"+"1");
+        console.log(" "+false);
+        console.log(!"Hello");
+        console.log("10"+2); //102
+        console.log("10"-2);  //8
+
+    //UNIT:-5
+
+        function greet(name){
+            console.log("Hello" + name + "!");
+        }
+        greet("Kritika");
+
+        // 1.Named function
+        function add(a,b) {
+            return a+b;
+        }
+        // console.log(add(3,4));
+        document.write(add(3,4));
+
+        function f(a,b){
+            a+b; 
+        }
+        console.log(f(10,20));
+
+        // 2.anonymous function
+         const multiply=function(a,b){
+             return a*b;
+         }
+        console.log(multiply(5,7));
+        //document.write(multiply(5,7));
+
+
+        // 3. Arrow function
+        const square=(x)=> x * x;
+        document.write(square(5));
+
+        // 4.funvtion with default parameter
+        function paper(name="user"){
+             console.log("Hello"+ name);
+         }
+         paper();
+        
+         //user input //RETURN
+
+          function sum(a,b){
+             var a=Number(prompt("Enter first digit"))
+             var b=prompt("Enter second digit")
+             return a+b;
+          }
+          console.log(sum());
+
+         function div(n1,n2){
+            return n1/n2;
+          }
+          let n1=Number(prompt("Enter first digit"))
+          let n2=Number(prompt("Enter second digit"))
+          console.log(n1,n2);
+
+         function isEven(number){
+            if (number%2===0){
+                return true;
+            }else{
+                return false;
+            }
+         }
+         console.log(isEven(4));
+         console.log(isEven(7));
+
+        
+
+
+
+    </script>
+
+
+<input type="text" onkeydown="keyDownHandler(event)" placeholder="type something...."></input>  
+
+
+<!-- FORM VALIDATE -->
+<form name="myForm" onsubmit="return validateForm()">
+    Name:<input type="text" name="username"><br>
+    Email:<input type="text" name="email"><br>
+    <input type="submit" value="Submit">
+</form>
+
+
+
+</body>
+</html>
